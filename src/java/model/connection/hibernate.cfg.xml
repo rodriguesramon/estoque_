@@ -46,5 +46,7 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/estoque?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">12345</property>
+    <mapping resource="model/bean/Produto.hbm.xml"/>
+    <mapping resource="model/bean/Categoria.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/05/2018 23:34:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Produto" table="produto" catalog="estoque" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="categoria" class="model.bean.Categoria" fetch="select">
+            <column name="idCategoria" />
+        </many-to-one>
+        <property name="nome" type="string">
+            <column name="nome" length="45" />
+        </property>
+        <property name="insertDt" type="timestamp">
+            <column name="insertDt" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
