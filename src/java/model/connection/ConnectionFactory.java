@@ -5,6 +5,7 @@
  */
 package model.connection;
 
+import org.hibernate.Session;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
 
@@ -31,7 +32,7 @@ public class ConnectionFactory {
         }
     }
     
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
+    public static Session getSessionFactory() {
+        return sessionFactory.openSession();
     }
 }
